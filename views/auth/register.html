@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrasi Mahasiswa — e-Office</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="public-page" data-page="register" data-public>
+  <main class="public-card">
+    <div class="public-brand">
+      <div class="brand-mark">eO</div>
+      <h1>Registrasi Mahasiswa</h1>
+      <p>Buat akun untuk mengajukan surat secara daring</p>
+    </div>
+
+    <div id="register-alert"></div>
+
+    <form id="register-form" novalidate>
+      <div class="form-group mb-2">
+        <label for="fullName">Nama Lengkap <span class="req">*</span></label>
+        <input type="text" id="fullName" name="fullName" placeholder="Nama sesuai KTM" required>
+      </div>
+      <div class="form-group mb-2">
+        <label for="nim">NIM <span class="req">*</span></label>
+        <input type="text" id="nim" name="nim" placeholder="Contoh: 2021010001" required>
+      </div>
+      <div class="form-group mb-2">
+        <label for="studyProgram">Program Studi <span class="req">*</span></label>
+        <input type="text" id="studyProgram" name="studyProgram" placeholder="Contoh: Teknik Informatika" required>
+      </div>
+      <div class="form-group mb-2">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" placeholder="nama@kampus.ac.id" required>
+      </div>
+      <div class="form-group mb-3">
+        <label for="password">Password <span class="req">*</span></label>
+        <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" required>
+        <div class="hint">Password disimpan dalam bentuk hash bcrypt, tidak pernah dalam teks biasa.</div>
+      </div>
+      <button class="btn btn-block" type="submit" id="register-submit">Daftar</button>
+    </form>
+
+    <div class="link-row">
+      <span>Sudah punya akun?</span>
+      <a href="/login">Masuk di sini</a>
+    </div>
+    <div class="alert alert-info mt-2" style="font-size:.8rem">
+      Registrasi publik hanya untuk akun mahasiswa. Akun staf administrasi dan pejabat dibuat oleh
+      administrator melalui menu <em>Akun Pegawai</em> atau lewat seeder.
+    </div>
+  </main>
+  <div id="toast-container"></div>
+  <script src="/js/app.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>

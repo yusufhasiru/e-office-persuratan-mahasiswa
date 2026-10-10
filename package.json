@@ -1,0 +1,42 @@
+{
+  "name": "e-office-persuratan-mahasiswa",
+  "version": "1.0.0",
+  "description": "Sistem Informasi Layanan Persuratan Mahasiswa (e-Office) dengan alur persetujuan berjenjang, PDF final, dan QR Code verifikasi.",
+  "main": "src/server.js",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate": "node database/migrations/run.js",
+    "seed": "node database/seeders/seed.js",
+    "setup": "npm run migrate && npm run seed",
+    "test": "node --test \"tests/*.test.js\"",
+    "test:watch": "node --test --watch \"tests/*.test.js\"",
+    "test:browser": "node tools/browser-check.js"
+  },
+  "keywords": [
+    "e-office",
+    "persuratan",
+    "express",
+    "sqlite",
+    "approval-workflow"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^13.0.3",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.2.1",
+    "express-session": "^1.18.2",
+    "helmet": "^8.1.0",
+    "pdfkit": "^0.17.2",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.4"
+  }
+}

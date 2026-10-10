@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Environment & rahasia (JANGAN pernah commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Database SQLite lokal (migrasi & seeder tetap disertakan)
+database/*.sqlite
+database/*.sqlite-shm
+database/*.sqlite-wal
+database/*.db
+
+# Dokumen PDF hasil pengguna
+storage/documents/
+storage/**/*.pdf
+
+# Log & berkas temporer
+logs/
+*.log
+tmp/
+temp/
+coverage/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
